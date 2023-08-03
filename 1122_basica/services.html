@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-widht,initial-scale=1" />
+
+    <link href="images/title-before.png" rel="shortcut icon" />   <!--파비콘(Favicon. Favorite Icon)-->
+
+    <!--공통 스타일:내비,푸터,글꼴,공통-->
+    <link href="include/common.css" rel="stylesheet" />  
+
+
+    <!--서브페이지(about.html) 전용 스타일-->
+    <link href="include/services.css" rel="stylesheet" />
+
+
+    <!--jQuery 준비-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" ></script>
+
+    <!--공통 스크립트-->
+    <script src="include/common.js"></script>
+
+
+    <title>Basica</title>
+
+
+
+
+</head>
+
+<body>
+
+    <div id="navOut">    <!--내비게이션 전체 박스-->
+
+        <div id="navBox">    <!--내비게이션 안쪽 박스 w1200-->
+
+            <div id="logoBox">
+                <a href="index.html"><img src="images/logo.png" alt="Logo" id="logo"></a>
+            </div>
+
+            <nav id="navi">
+                <i id="view" class="fas fa-bars"></i>
+                <ul id="menu">
+                    <li class="main"><a href="index.html">Home</a></li>
+                    <li class="main"><a href="about.html">About Us</a></li>
+                    <li class="main"><a href="services.html" class="highlight">Services</a></li>
+                    <li class="main"><a href="portfolio.html">Portfolio</a></li>
+                    <li class="main"><a href="pages.html">Pages</a></li>
+                    <li class="main"><a href="blog.html">Blog</a></li>
+                    <li class="main"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+        </div>    <!--내비게이션 안쪽 박스 w1200 #navBox-->
+
+    </div>    <!--내비게이션 전체 박스 #navOut-->
+
+
+    <div id="subTitle">
+        <h2>Services</h2>
+    </div>
+
+    <section id="sec1">
+
+    </section>
+
+
+
+    <section id="sec2">
+  
+    </section>
+
+
+
+    <footer id="foot">
+        <ul id="footerBox">
+
+            <li class="footerList">
+                <h3>Contact Us</h3>
+                <p><b>Address:</b> 123 Downtown Avenue, Manhattan, New York, United States of America<br/>
+                    <b>Phone:</b> +1 123 45678910<br/>
+                    <b>Fax:</b> +1 123 45678910<br/>
+                    <b>Email:</b> <a href="mailto:info@yourcompanydomain.com">info@yourcompanydomain.com</a></p>
+            </li>
+
+            <li class="footerList">
+                <h3>Our Social Networks</h3>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.</p>
+                <i class="fab fa-facebook-f icon_footer"></i>
+                <i class="fab fa-twitter icon_footer"></i>
+                <i class="fab fa-instagram icon_footer"></i>
+                <i class="fas fa-rss icon_footer"></i>
+            </li>
+
+            <li class="footerList">
+                <h3>About Our Company</h3>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci.</p>
+            </li>
+
+        </ul>
+    </footer>
+
+
+
+    <!--모달창 영역----------------------->
+    <div id="modal" onClick="modalClose()">
+
+        <div id="modalBox">  <!--모달창 내부 박스-->
+            <img src="" alt="" id="modalImage">
+            <h2 id="modalText"></h2>
+        </div>
+
+        <!--모달창 닫기 버튼-->
+        <button id="modalClose" onClick="modalClose()">&times;</button>
+
+    </div>
+
+
+</body>
+</html>
+
+<!-- https://meet.google.com/wwk-yxac-yen -->

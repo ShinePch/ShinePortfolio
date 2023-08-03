@@ -1,0 +1,45 @@
+/*index.css : index.html 페이지용 스타일*/
+
+.list {    /*가로 3등분 리스트 */
+    width:calc((100% - 40px) / 3);
+    margin-right: 20px;
+    float:left; 
+}
+.list:last-child { margin-right: 0;}
+
+.list img {   /*리스트 안의 모든 이미지*/
+    width:100%;  display: block;
+}
+
+.list2 {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.caption {
+    position: absolute;
+    top: 20px; left: 20px;
+    bottom:20px; right:20px;
+    background-color: rgba(255,255,255,.6);
+    opacity:0; transition: .3s;
+}
+.list2:hover .caption { opacity:1 }
+
+.captionInBox {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform:translate(-50%,-50%);
+    width: 90%;
+    text-align: center;
+}
+
+.captionInBox a {
+    background-color: #FD5D5D; color: #fff;
+    padding: 3px 10px; 
+    display: inline-block; margin-top: .5rem;
+    transition:.3s;
+    border-radius:3px;
+}
+.captionInBox a:hover {
+    background-color: #D9534F;
+}

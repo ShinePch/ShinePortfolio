@@ -1,0 +1,203 @@
+
+
+/*헤더 영역--------------------------*/
+#header {
+    margin-top: 70px; height: 700px;
+    background: url(../images/bg1.jpg) no-repeat center;
+    background-size: cover;
+    position: relative; transition: .3s;
+}
+
+.headerBox {    /*헤더 안의 각 텍스트 박스*/
+    position: absolute; top: 50%; left: 50%;
+    transform:translate(-50%,-50%);
+    width: 80%; color: #fff; text-align: center;
+    letter-spacing: -1px; 
+    display: none;
+}
+.headerBox:first-child { display: block;}
+.headerBox > h1 { 
+    font-size: 4rem; line-height: .9em;}
+.headerBox > p {
+    font-size: 1.5rem; line-height: 0.9em;
+    width: 60%; margin: 2rem auto;
+}
+
+.slideButton {   /*좌우 버튼 공통*/
+    position: absolute; top: 50%; transform:translateY(-50%);
+    font-size: 3rem; background: rgba(0,0,0,.5); color: #fff;
+    padding: 10px 20px; border: none; cursor: pointer;
+}
+.slideLeft { left: 10px;  }    /*왼쪽 버튼*/
+.slideRight { right: 10px;  }   /*오른쪽 버튼*/
+
+#pagination {   /*하단 Pagination*/
+    position: absolute; bottom: 10px; 
+    left: 50%; transform: translateX(-50%);
+    display: flex; justify-content: center;
+}
+.circle {
+    width: 100px; height: 7px; background: #fff;
+    opacity: 0.3; margin: 0 3px;
+}
+.circle:first-child { opacity: 1;}
+
+
+
+/*섹션1---------------------------*/
+#sec1 {
+    width: 100%; max-width: 1200px;
+    margin: 50px auto;
+}
+
+#listBox1 {
+    display: flex; flex-wrap: wrap;
+    justify-content: space-between;
+}
+.list1 { width: 32%; text-align: center;}
+.icon1 {
+    font-size: 3rem; color:#54B435;
+    margin-bottom: 1rem;  
+}
+.list1 > h3 { font-size: 1.5rem; margin-bottom: .5rem;}
+.list1 > p { line-height: 1.6rem; margin-bottom: .5rem;}
+.button1 {
+    background: #379237; color: #fff; font-size: 1.2rem;
+    border: none; padding: 6px 15px; cursor: pointer;
+}
+.button1:hover { background: #54B435;}
+
+
+/*섹션2 ----------------------------*/
+#sec2 {
+    width: 100%; max-width: 1200px; margin: 50px auto;
+}
+.sectionTitle {
+    font-size: 3rem;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 1rem;
+}
+.sectionTitle::before {
+    content: url(../images/title-before.png);
+    position: absolute; top: 50%; left: 0;
+    transform: translateY(-50%);
+}
+
+
+#listBox2 {
+    display: flex; flex-wrap: wrap;
+}
+.list2 {
+    width: calc((100% - 60px) / 3);
+    margin: 0 30px 30px 0;
+    position: relative;
+    overflow: hidden;
+}
+.list2:nth-child(3n) { margin-right: 0;}
+.image2 { width: 100%; display: block; transition: .3s;}
+
+.caption {
+    background: #000; color: #ddd;
+    display: flex; justify-content: space-between;
+    padding: 1rem;
+    position: absolute; bottom: -70px; left: 0;
+    width: 100%; height: 70px;
+    transition: .3s;
+}
+.caption > h3 {
+    font-size: 1.5rem;
+}
+.button2 {
+    border: none;  background: #FF6464; color: #fff;
+    padding: 7px; cursor: pointer;
+}
+
+.list2:hover .image2 {
+    transform:translateY(-20px);
+}
+.list2:hover .caption {
+    bottom: 0;
+}
+
+/*모달창 영역-------------------*/
+#modal {    /*모달창 전체 박스*/
+    position: fixed; top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,.7);
+    animation: modal .3s;
+
+    display: none; 
+    justify-content: center; align-items: center;
+
+    z-index: 9;
+}
+
+#modalBox {     /*모달창 내용 박스*/
+    width: 90%; max-width: 1000px;
+    margin: auto; padding: 10px;
+    background: #fff; border-radius: 10px;
+    animation: modalBox .5s .3s both;
+}
+
+#modalImage { width: 100%; display: block;}
+
+#modalText { font-size: 1rem; margin-top: 1rem;}
+
+#modalClose {
+    position: absolute; top: 10px; right: 10px;
+    border: none; background: none;
+    color: #fff; font-size: 2rem;
+    cursor: pointer;
+}
+#modalClose:hover {
+    animation:close 1s infinite linear;
+}
+
+@keyframes modal {
+    from { opacity: 0;}     to {opacity: 1;}
+}
+
+@keyframes modalBox {
+    from { transform: translateY(50px); opacity: 0;}
+    to { transform: translateY(0); opacity: 1;}
+}
+
+@keyframes close {
+    from { transform:rotate(0)}
+    to { transform:rotate(360deg)}
+    
+}
+
+
+
+/*섹션3-------------*/
+#sec3 {
+    width: 100%; max-width: 1200px; margin: 50px auto;
+}
+
+
+
+@media screen and (max-width:768px) {
+
+    /*헤더 -------------*/
+    .headerBox > h1 { font-size: 2rem;}
+    .headerBox > p { font-size: 1.2rem; line-height: 1.6rem;}
+
+    /*섹션1----------*/
+    .icon1 { font-size: 4rem;}
+    .list1 { width: 90%; margin-bottom: 4rem}
+
+    /*섹션2-----------*/
+    .sectionTitle { font-size: 1.5rem;}
+
+    .list2 {
+        width: calc((100% - 30px) /2);
+    }
+    .list2:nth-child(3n) { margin-right: 30px;}
+    .list2:nth-child(2n) { margin-right:0 }
+
+    .caption { padding: 5px; align-items: center;}
+    .caption > h3 { font-size: 1rem;   }
+    .button2 { padding: 2px;} 
+}

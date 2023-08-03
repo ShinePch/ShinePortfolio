@@ -1,0 +1,63 @@
+/*common.css : 모든 페이지 공통 스타일*/
+
+/*웹폰트 CDN 연결*/
+@import url(https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css);
+
+/*FontAwesome CDN 연결*/
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css);
+
+* {     /*모든 요소 공통 사항*/
+    box-sizing: border-box;
+    font-family: 'NanumSquare', sans-serif;
+    margin: 0;
+}
+
+a { text-decoration: none;}
+
+ul { list-style: none; padding: 0;}
+
+#left {   /*왼쪽 고정 박스*/
+    width:300px; height:100vh;
+    position: fixed; left:0; top: 0;
+    padding:.5rem;
+}
+
+#right {    /*오른쪽 내용 박스*/
+    margin-left: 300px; 
+}
+
+#logo {    /*로고 이미지*/
+    float:left;  width: 50px;
+    margin: 0 .5rem 1rem 0;
+}
+#header p { 
+    clear:both; margin-bottom: 2rem;
+}
+
+
+.main > a {   /*메뉴 각 리스트 안의 링크 */
+    display: block; 
+    line-height: 2rem; padding: 0 0.5rem;
+    color: #333;
+    position: relative;  transition:.3s
+}
+.main > a:hover { color: #fff;}
+.main > a::after {
+    content:'';
+    position: absolute; left: 0; top: 0;
+    width: 0; height: 100%;
+    background: #F1A661;
+    z-index: -1;
+    transition:.3s
+}
+.main > a:hover::after {
+    width: 100%;
+}
+
+#foot {
+    position: absolute;
+    bottom: 0; padding: 0.5rem;
+}
+#foot .icon {
+    margin-right: .7rem;
+}

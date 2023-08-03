@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-widht,initial-scale=1" />
+
+    <link href="images/title-before.png" rel="shortcut icon" />   <!--파비콘(Favicon. Favorite Icon)-->
+
+    <!--공통 스타일:내비,푸터,글꼴,공통-->
+    <link href="include/common.css" rel="stylesheet" />  
+
+
+    <!--메인페이지(index.html) 전용 스타일-->
+    <link href="include/index.css" rel="stylesheet" />
+
+
+    <!--jQuery 준비-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" ></script>
+
+    <!--공통 스크립트-->
+    <script src="include/common.js"></script>
+
+
+    <title>Basica</title>
+
+
+
+
+</head>
+
+<body>
+
+    <div id="navOut">    <!--내비게이션 전체 박스-->
+
+        <div id="navBox">    <!--내비게이션 안쪽 박스 w1200-->
+
+            <div id="logoBox">
+                <a href="index.html"><img src="images/logo.png" alt="Logo" id="logo"></a>
+            </div>
+
+            <nav id="navi">
+                <i id="view" class="fas fa-bars"></i>
+                <ul id="menu">
+                    <li class="main"><a href="index.html" class="highlight">Home</a></li>
+                    <li class="main"><a href="about.html">About Us</a></li>
+                    <li class="main"><a href="services.html">Services</a></li>
+                    <li class="main"><a href="portfolio.html">Portfolio</a></li>
+                    <li class="main"><a href="pages.html">Pages</a></li>
+                    <li class="main"><a href="blog.html">Blog</a></li>
+                    <li class="main"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+        </div>    <!--내비게이션 안쪽 박스 w1200 #navBox-->
+
+    </div>    <!--내비게이션 전체 박스 #navOut-->
+
+
+
+
+    <header id="header">   <!--헤더 영역---------------------------->
+
+        <div class="headerBox">    <!--타이틀/내용 박스1-->
+            <h1>WELCOME TO BASICA! <br />A PROFESSIONAL DIGITAL DESIGN</h1>
+            <p>SED MATTIS ENIM IN NULLA BLANDIT TINCIDUNT. PHASELLUS VEL SEM CONVALLIS, MATTIS EST ID, INTERDUM AUGUE. INTEGER LUCTUS MASSA IN ARCU EUISMOD VENENATIS.</p>
+        </div>
+
+        <div class="headerBox">    <!--타이틀/내용 박스2-->
+            <h1>POWERFUL AND <br />RESPONSIVE HTML TEMPLATE</h1>
+            <p>PHASELLUS ADIPISCING FELIS A DICTUM DICTUM. LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. DONEC AT LIGULA RISUS.</p>
+            <button class="headerButton">Learn More</button>
+        </div>
+        
+        <div class="headerBox">    <!--타이틀/내용 박스3-->
+            <h1>WORKS SEAMLESSLY <br />WELL ON ALL DEVICES</h1>
+            <p>LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. FUSCE VITAE EUISMOD LACUS. MAECENAS IN TEMPOR LECTUS. NAM MATTIS, ODIO UT DAPIBUS ORNARE, LIBERO.</p>
+            <button class="headerButton">Learn More</button>
+        </div>
+
+        <button class="slideButton slideLeft" onClick="slide(-1)">&#10092;</button>
+        <button class="slideButton slideRight" onClick="slide(1)">&#10093;</button>
+ 
+        <div id="pagination">       <!--하단 페이지네이션-->
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+
+    </header>
+
+
+
+    <section id="sec1">    <!--첫 번째 섹션-->
+
+        <ul id="listBox1">
+            <li class="list1">
+                <i class="fa-solid fa-house icon1"></i>
+                <h3>Aliquam in adipiscing</h3>
+                <p>Praesent rhoncus mauris ac sollicitudin vehicula. Nam fringilla turpis turpis, at posuere turpis aliquet sit amet</p>
+                <button class="button1">Read More</button>
+            </li>
+
+            <li class="list1">
+                <i class="fa-solid fa-image icon1"></i>
+                <h3>Aliquam in adipiscing</h3>
+                <p>Praesent rhoncus mauris ac sollicitudin vehicula. Nam fringilla turpis turpis, at posuere turpis aliquet sit amet</p>
+                <button class="button1">Read More</button>
+            </li>
+
+            <li class="list1">
+                <i class="fa-solid fa-heart icon1"></i>
+                <h3>Aliquam in adipiscing</h3>
+                <p>Praesent rhoncus mauris ac sollicitudin vehicula. Nam fringilla turpis turpis, at posuere turpis aliquet sit amet</p>
+                <button class="button1">Read More</button>
+            </li>
+        </ul>
+    </section>
+
+
+
+    <section id="sec2">
+        <h1 class="sectionTitle">OUR RECENT WORKS</h1>
+
+        <ul id="listBox2">
+
+            <li class="list2">
+                <img src="images/1.jpg" alt="works" class="image2">
+                <div class="caption">
+                    <h3>SETTING</h3>
+                    <button class="button2" onClick="modal(0)">Take a look</button>
+                </div>
+            </li>
+            
+            <li class="list2">
+                <img src="images/2.jpg" alt="works" class="image2">
+                <div class="caption">
+                    <h3>SETTING</h3>
+                    <button class="button2" onClick="modal(1)">Take a look</button>
+                </div>
+            </li>
+
+            <li class="list2">
+                <img src="images/3.jpg" alt="works" class="image2">
+                <div class="caption">
+                    <h3>SETTING</h3>
+                    <button class="button2" onClick="modal(2)">Take a look</button>
+                </div>
+            </li>
+
+            <li class="list2">
+                <img src="images/4.jpg" alt="works" class="image2">
+                <div class="caption">
+                    <h3>SETTING</h3>
+                    <button class="button2" onClick="modal(3)">Take a look</button>
+                </div>
+            </li>
+
+            <li class="list2">
+                <img src="images/5.jpg" alt="works" class="image2">
+                <div class="caption">
+                    <h3>SETTING</h3>
+                    <button class="button2" onClick="modal(4)">Take a look</button>
+                </div>
+            </li>
+
+            <li class="list2">
+                <img src="images/6.jpg" alt="works" class="image2">
+                <div class="caption">
+                    <h3>SETTING</h3>
+                    <button class="button2" onClick="modal(5)">Take a look</button>
+                </div>
+            </li>
+
+        </ul>
+    </section>
+
+
+
+    <section id="sec3">
+
+        <h2 class="sectionTitle">OUR SUCCESS STORIES</h2>
+
+        <div id="sec3Contnets"></div>
+
+    </section>
+
+
+
+    <footer id="foot">
+        <ul id="footerBox">
+
+            <li class="footerList">
+                <h3>Contact Us</h3>
+                <p><b>Address:</b> 123 Downtown Avenue, Manhattan, New York, United States of America<br/>
+                    <b>Phone:</b> +1 123 45678910<br/>
+                    <b>Fax:</b> +1 123 45678910<br/>
+                    <b>Email:</b> <a href="mailto:info@yourcompanydomain.com">info@yourcompanydomain.com</a></p>
+            </li>
+
+            <li class="footerList">
+                <h3>Our Social Networks</h3>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.</p>
+                <i class="fab fa-facebook-f icon_footer"></i>
+                <i class="fab fa-twitter icon_footer"></i>
+                <i class="fab fa-instagram icon_footer"></i>
+                <i class="fas fa-rss icon_footer"></i>
+            </li>
+
+            <li class="footerList">
+                <h3>About Our Company</h3>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci.</p>
+            </li>
+
+        </ul>
+    </footer>
+
+
+
+    <!--모달창 영역----------------------->
+    <div id="modal" onClick="modalClose()">
+
+        <div id="modalBox">  <!--모달창 내부 박스-->
+            <img src="" alt="" id="modalImage">
+            <h2 id="modalText"></h2>
+        </div>
+
+        <!--모달창 닫기 버튼-->
+        <button id="modalClose" onClick="modalClose()">&times;</button>
+
+    </div>
+
+
+</body>
+</html>
+
+<!-- https://meet.google.com/wwk-yxac-yen -->

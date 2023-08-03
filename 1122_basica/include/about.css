@@ -1,0 +1,57 @@
+/*about.html용 스타일*/
+
+#subTitle {
+    width: 100%; padding:30px 0;
+    background: #54B435; color: #fff;
+    margin-top: 70px;
+}
+
+#subTitle > h2 {
+    width: 100%; max-width: 1200px;
+    margin: auto;
+}
+
+#sec1 {
+    width: 100%; max-width: 1200px;
+    margin: 50px auto;
+
+    display: flex; flex-wrap: wrap;
+}
+
+#imgBox1 { width: 30%;}
+#imgBox1 > img { width: 100%; display: block;}
+
+#textBox1 { width: 70%; padding-left: 2rem;}
+#textBox1 > h3 { font-size: 2rem; margin-bottom: 1rem; }
+#textBox1 > h4 { font-size: 1.5rem; margin-bottom: 0.7rem;  }
+#textBox1 > p { line-height: 1.5rem; margin-bottom: 1rem; text-align:justify;}
+
+
+#sec2 {
+    width: 100%; max-width: 1200px;
+    margin: 50px auto;
+}
+
+#listBox2 {
+    display: flex; flex-wrap: wrap;
+}
+.list2 {
+    width: calc((100% - 60px) / 3);
+    margin: 0 30px 30px 0;
+}
+.list2:last-child { margin-right: 0;}
+.list2 > img { width: 100%; display: block; margin-bottom: 1rem; transition: .3s;}
+.list2 > img:hover { filter:blur(3px)}
+
+
+
+
+@media screen and (max-width:768px) {
+    #imgBox1 { width: 90%; margin: auto; margin-bottom: 1rem;}
+    #textBox1 { width: 100%; padding: 1rem;margin-bottom: 1rem;}
+
+    .list2 {width: 90%; margin: auto; margin-bottom: 2rem;}
+    .list2:last-child { margin-right: auto;}
+}
+
+
