@@ -1,4 +1,5 @@
 # ShinePortfolio
+<link rel="stylesheet" href="./index.css">
 <style>
 ul, li {
     list-style: none;

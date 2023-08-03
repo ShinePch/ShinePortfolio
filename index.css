@@ -1,0 +1,6 @@
+ul, li {
+    list-style: none;
+}
+li:hover {
+    font-size: 2rem;
+}
