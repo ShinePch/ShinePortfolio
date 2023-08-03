@@ -7,6 +7,7 @@ ul, li {
 .listBox {
     display : flex;
     border : 1px solid #fff;
+    width : 50%;
 }
 .listBox > .list1 {
     color : red;
