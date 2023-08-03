@@ -1,0 +1,10 @@
+// 값의 일부분에 변수를 넣을때는
+// #{변수명}
+
+@mixin bgimg($img, $pos, $size) {
+    background-image:url(#{$url}#{$img}.png) ;
+    background-position:$pos ;
+    background-repeat:no-repeat;
+    background-size:$size ;
+}
+

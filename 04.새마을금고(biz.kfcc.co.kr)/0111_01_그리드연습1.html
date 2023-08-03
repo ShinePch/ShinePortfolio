@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box;} body { padding: 50px; } .spacer { height: 50px; }
+
+    .container {
+        border: 1px solid #f00;
+        padding: 1rem;
+
+    }
+
+    .item {
+        border: 1px solid #ccc;
+        padding: 0.5rem;
+    }
+
+    .c1 {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .c2 {
+        display: grid;
+    }
+    /* 
+        행:가로 열:세로
+        grid
+        1) container ( 부모 ) ==>
+            gird-template-columns : 열을 선언
+
+            : 값1 값2 값3 (열의 넓이 값)
+              1열 2열 3열
+            gird-template-rows : 행을 선언
+
+        2) item ( 자식 ) ==>
+        */
+    
+    .c3 {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    
+    .c4 {
+        display: grid;
+        grid-template-columns: 100px 200px 300px 400px;
+    }
+    
+    .c5 {
+        display: grid;
+        grid-template-rows: 50px 70px 100px 150px;
+    }
+    
+    .c6 {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        grid-template-rows: 100px 200px;
+    }
+    
+    .c7 {
+        display: grid;
+        grid-template-columns: 1fr 2fr 3fr;
+        /* fraction ( 분수 ) */
+    }
+
+    .c8 {
+        display: grid;
+        grid-template-columns: repeat(3, 300px);
+    }
+
+    /* 
+        repeat - 반복
+        (3, 300px ) --> 300px 3개
+    */
+
+    .c9 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .c10 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap:30px
+        /* 
+            grid-gap : 값1 값2;
+            값1 = rowgap
+            값2 = colgap
+
+            gap:값1 값2
+        */
+    }
+        
+
+
+</style>
+</head>
+<body>
+    <!-- C1 -->
+    <div class="container c1">
+        <div class="item">item1</div>
+        <div class="item">item2</div>
+        <div class="item">item3</div>
+        <div class="item">item4</div>
+    </div>
+    <div class="spacer"></div>
+
+
+
+    <!-- C2 -->
+    <div class="container c2">
+        <div class="item">item1</div>
+        <div class="item">item2</div>
+        <div class="item">item3</div>
+        <div class="item">item4</div>
+    </div>
+    <div class="spacer"></div>
+
+
+
+    <!-- C3 -->
+    <div class="container c3">
+        <div class="item">item1</div>
+        <div class="item">item2</div>
+        <div class="item">item3</div>
+        <div class="item">item4</div>
+    </div>
+    <div class="spacer"></div>
+
+
+
+    <!-- C4 -->
+    <div class="container c4">
+        <div class="item">item1</div>
+        <div class="item">item2</div>
+        <div class="item">item3</div>
+        <div class="item">item4</div>
+    </div>
+    <div class="spacer"></div>
+
+
+    
+    <!-- C5 -->
+    <div class="container c5">
+        <div class="item">item1</div>
+        <div class="item">item2</div>
+        <div class="item">item3</div>
+        <div class="item">item4</div>
+    </div>
+    <div class="spacer"></div>
+    
+
+
+
+    <!-- C6 -->
+    <div class="container c6">
+        <div class="item">item1</div>
+        <div class="item">item2</div>
+        <div class="item">item3</div>
+        <div class="item">item4</div>
+    </div>
+    <div class="spacer"></div>
+    
+    
+
+
+
+    <!-- C7 -->
+    <div class="container c7">
+        <div class="item">item1</div>
+        <div class="item">item2</div>
+        <div class="item">item3</div>
+        <div class="item">item4</div>
+        <div class="item">item5</div>
+        <div class="item">item6</div>
+        <div class="item">item7</div>
+        <div class="item">item8</div>
+        <div class="item">item9</div>
+        <div class="item">item0</div>
+    </div>
+    <div class="spacer"></div>
+    
+
+
+
+    <!-- C8 -->
+    <div class="container c8">
+        <div class="item">item1</div>
+        <div class="item">item2</div>
+        <div class="item">item3</div>
+        <div class="item">item4</div>
+        <div class="item">item5</div>
+        <div class="item">item6</div>
+        <div class="item">item7</div>
+        <div class="item">item8</div>
+        <div class="item">item9</div>
+        <div class="item">item0</div>
+    </div>
+    <div class="spacer"></div>
+
+
+
+    <!-- C9 -->
+    <div class="container c9">
+        <div class="item">item1</div>
+        <div class="item">item2</div>
+        <div class="item">item3</div>
+        <div class="item">item4</div>
+        <div class="item">item5</div>
+        <div class="item">item6</div>
+        <div class="item">item7</div>
+        <div class="item">item8</div>
+        <div class="item">item9</div>
+        <div class="item">item0</div>
+    </div>
+    <div class="spacer"></div>
+
+
+
+    <!-- C10 -->
+    <div class="container c10">
+        <div class="item">item1</div>
+        <div class="item">item2</div>
+        <div class="item">item3</div>
+        <div class="item">item4</div>
+        <div class="item">item5</div>
+        <div class="item">item6</div>
+        <div class="item">item7</div>
+        <div class="item">item8</div>
+        <div class="item">item9</div>
+        <div class="item">item0</div>
+    </div>
+    <div class="spacer"></div>
+    
+</body>
+</html>

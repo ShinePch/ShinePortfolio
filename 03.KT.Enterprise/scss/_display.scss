@@ -1,0 +1,25 @@
+// 화면표시 설정
+
+.d-flex {
+    display: flex;
+
+    &-xr {
+        justify-content: right;
+    }
+    &-xc {
+        justify-content: center;
+    }
+    &-xb {
+        justify-content: space-between;
+    }
+    &-yc {
+        align-items: center;
+    }
+    &-yb {
+        align-items:flex-end;
+    }
+}
+
+// 텍스트 정렬
+.t-c { text-align: center; }
+.t-r { text-align: right;}

@@ -1,0 +1,26 @@
+.d-flex {
+    display: flex;
+    &-xc {
+        justify-content: center;
+    }
+    &-xr {
+        justify-content: right;
+    }
+        
+    &-xsb {
+        justify-content: space-between;
+    }
+    &-yc {
+        align-items: center;
+    }
+}
+
+.d-grid {
+    display: grid;
+}
+
+
+// 가운데 정렬
+.mx-auto {
+    margin: 0 auto;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        * { margin:0; padding:0;  box-sizing: border-box; }
+
+        body { padding: 100px; }
+
+        .cont {
+            width:740px; height: 400px;
+            background-color: #ccc;
+            display: grid;
+            margin-bottom: 50px;
+            gap:10px;
+        }
+        .cont .col {
+            background-color: #fc0;
+        }
+
+        .cont1, .cont5 {
+            grid-template-columns: 460px 270px;
+            grid-template-rows: 195px 195px;
+        }
+        .cont1 .col1,
+        .cont5 .col1 {
+            grid-row:1 / -1;
+            /*  grid-row-start : 1 , grid-row-end: -1 */
+        }
+
+
+        .cont2, .cont3, .cont6 {
+            grid-template-columns: 460px 270px;
+            grid-template-rows: 400px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="cont cont1">
+        <div class="col col1">content1</div>
+        <div class="col col2">content2</div>
+        <div class="col col3">content3</div>
+    </div>
+    <div class="cont cont2">
+        <div class="col col1">content1</div>
+        <div class="col col2">content2</div>
+    </div>
+    <div class="cont cont3">
+        <div class="col col1">content1</div>
+        <div class="col col2">content2</div>
+    </div>
+    <div class="cont cont4">
+        <div class="col col1">content1</div>
+    </div>
+    <div class="cont cont5">
+        <div class="col col1">content1</div>
+        <div class="col col2">content2</div>
+        <div class="col col3">content3</div>
+    </div>
+    <div class="cont cont6">
+        <div class="col col1">content1</div>
+        <div class="col col2">content2</div>
+    </div>
+</body>
+</html>

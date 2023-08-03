@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        * { margin:0; padding: 0; box-sizing: border-box; }
+
+        .box {
+            width:100%;
+            background-color: #eee;
+        }
+        .box .inner {
+            width:900px; height: 100px;
+            background-color: #333;
+            margin: 0 auto;
+        }
+        .subbox {
+            position: fixed;
+            left:0; top:100px;
+            width:100%; height: 200px;
+            background-color: #fc0;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- type1 -->
+    <div class="box">
+        <div class="inner">
+            <div class="subbox"></div>
+        </div>
+    </div>
+
+
+    <!-- type2 -->
+
+    
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script>
+
+        $('.box .inner .subbox').hide();
+
+        $('.box .inner').on('mouseenter', function() {
+            $('.box .inner .subbox').show();
+        });
+
+        $('.box, .box .inner .subbox').on('mouseleave', function() {
+            $('.box .inner .subbox').hide();
+        });
+
+    </script>
+</body>
+</html>

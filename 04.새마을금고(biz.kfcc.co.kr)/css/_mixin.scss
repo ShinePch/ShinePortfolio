@@ -1,0 +1,15 @@
+// 믹스인 정의하기
+
+// 1. border-radius
+
+/*
+    @mixin 이름($w : 100px , $h : null) {
+        width : $w
+        height:$h
+    }
+*/
+@mixin box-round($r, $w:null) {
+    border-radius: $r;
+    width: $w;
+
+}

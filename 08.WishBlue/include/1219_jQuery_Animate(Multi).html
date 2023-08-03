@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-widht,initial-scale=1" />
+    <title>jQuery_Animate</title>
+
+    <style>
+
+        /*웹폰트 CDN 연결*/
+        @import url(https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css);
+
+        * {     /*모든 요소 공통 사항*/
+            box-sizing: border-box;
+            font-family: 'NanumSquare', sans-serif;
+            margin: 0; outline:none;
+        }
+
+        ul { list-style: none; padding: 0; }
+        a { text-decoration: none; }
+
+        #start { background: #ADA2FF; color: #fff;
+            border: none; font-size: 2rem; padding: 7px 10px;
+            cursor: pointer;}
+
+        #box {
+            width: 100px; height: 100px; background: #FF8E9E;
+            position: absolute;
+        }
+
+    </style>
+
+    <!--jQuery Library CDN-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <script>
+
+        $(function(){      //페이지가 열릴 때
+
+            $('#start').click(function(){
+                $('#box').animate({
+                    left: '500px', width:'200px', height:'200px'
+                },500);
+                $('#box').animate({
+                    top: '500px', width:'100px', height:'100px'
+                },500);
+                $('#box').animate({
+                    left:'0', width:'200px', height:'200px'
+                },500);
+                $('#box').animate({
+                    top: '0px', width:'100px', height:'100px'
+                },500);
+            });
+
+        });   //end $(function)
+
+    </script>
+
+
+</head>
+
+<body>
+
+    <button id="start">Start Animate</button>
+
+    <div id="box"></div>
+
+</body>
+</html>
