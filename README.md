@@ -4,16 +4,26 @@ ul, li {
     list-style: none;
 }
 .listBox {
-    color : red;
+    display : flex;
+    border : 1px solid #fff;
 }
-.listBox > .list {
+.listBox > .list1 {
+    color : red;
+    font-size : 1rem;
+}
+.listBox > .list2 {
     color : blue;
+    font-size : 1.2rem;
+}
+.listBox > .list3 {
+    color : green;
+    font-size : 1.5rem;
 }
 </style>
 <ul class="listBox">
-    <li class="list">1</li>
-    <li>2</li>
-    <li>3</li>
+    <li class="list1">1</li>
+    <li class="list2">2</li>
+    <li class="list3">3</li>
 
 </ul>
 <p>fawfew</p>
