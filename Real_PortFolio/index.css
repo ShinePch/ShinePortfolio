@@ -70,18 +70,24 @@ html, body {
   justify-content: center;
   flex-direction: column;
 }
-.page1 h1 {
+.page1 .page1Ctt {
+  display: flex;
+}
+.page1 .page1Ctt :nth-child(1) {
+  border: 1px solid #fff;
+}
+.page1 .page1Ctt :nth-child(2) h1 {
   font-size: 100px;
   font-family: impact;
   margin-bottom: 2rem;
   border: 1px solid #ddd;
   padding: 2rem;
 }
-.page1 p {
+.page1 .page1Ctt :nth-child(2) p {
   color: #fc0;
   font-size: 1.5rem;
 }
-.page1 p span:nth-child(2) {
+.page1 .page1Ctt :nth-child(2) p span:nth-child(2) {
   color: bisque;
 }
 
