@@ -1,9 +1,9 @@
 # ShinePortfolio
 <link rel="stylesheet" href="./index.css">
 <style>
-body{
-    background-color : black;
-}
+body {
+            background-color: black;
+        }
 ul, li {
     list-style: none;
 }
