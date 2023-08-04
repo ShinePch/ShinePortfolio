@@ -2,8 +2,8 @@
 <link rel="stylesheet" href="./index.css">
 <style>
 body {
-            background-color: gray;
-        }
+    background-color: gray;
+    }
 ul, li {
     list-style: none;
 }

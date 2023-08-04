@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .gnb {
+    position: fixed;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    list-style: none;
+    z-index: 9999;
+  
+    li {
+      &:not(:first-child) {
+        margin-top: 20px;
+      }
+  
+      a {
+        display: block;
+        width: 100px;
+        border-radius: 100%;
+        background-color: #333;
+        color: #efefef;
+        text-align: center;
+        line-height: 100px;
+        font-size: 12px;
+        text-decoration: none;
+      }
+    }
+  }
+  
+  html, body {
+    height: 100%;
+  }
+  
+  .page {
+    width: 100%;
+    min-height: 100%;
+    padding: 2.5rem 0;
+    box-sizing: border-box;
+  
+    h2 {
+      font-size: 50px;
+      padding: 1rem 1.5rem;
+      position: relative;
+  
+      &::after {
+        content: '';
+        width: 85%;
+        height: 2px;
+        background-color: #333;
+        position: absolute;
+        right: 1.5rem;
+        bottom: 1.5rem;
+      }
+    }
+  }
+  
+  /* **********page1********** */
+  
+  .page1 {
+    background-color: #111;
+    color: #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  
+    h1 {
+      font-size: 100px;
+      font-family: impact;
+      margin-bottom: 2rem;
+      border: 1px solid #ddd;
+      padding: 2rem;
+    }
+  
+    p {
+      color: #fc0;
+      font-size: 1.5rem;
+  
+      span:nth-child(2) {
+        color: bisque;
+      }
+    }
+  }
+  
+  /* **********page2********** */
+  
+  .page2 .txt1 {
+    border: 1px solid #ccc;
+    padding: 2rem;
+    font-size: 1.5rem;
+    color: #333;
+    line-height: 3rem;
+    margin: 3rem 2rem;
+  }
+  
+  .list {
+    border-left: 5px solid #333;
+    position: relative;
+    left: 50%;
+    margin-left: -2.5px;
+    padding-left: 30px;
+  
+    li {
+      border: 1px solid #ccc;
+      width: 600px;
+      padding: 1rem;
+      box-sizing: border-box;
+      position: relative;
+  
+      &:not(:first-child) {
+        margin-top: 30px;
+      }
+  
+      &:nth-child(odd) {
+        background-color: #ccc;
+      }
+  
+      &:nth-child(even) {
+        left: -665px;
+        text-align: right;
+        background-color: #333;
+        color: #fff;
+      }
+  
+      h3 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+  
+      p {
+        font-size: 1.2rem;
+        line-height: 2rem;
+      }
+  
+      &::after {
+        content: '';
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        position: absolute;
+      }
+  
+      &:nth-child(odd):after {
+        content: '';
+        top: 30px;
+        left: -20px;
+        border-right-color: #ccc;
+      }
+  
+      &:nth-child(even):after {
+        content: '';
+        top: 30px;
+        right: -20px;
+        border-left-color: #333;
+      }
+    }
+  }
+  
+  /* **********page3********** */
+  
+  .page3 {
+    background-color: #222;
+    color: #fff;
+  }
+  
+  .skill {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 50px;
+  
+    li {
+      height: 100px;
+      background-color: #fc0;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #111;
+      padding: 0 2rem;
+      box-sizing: border-box;
+  
+      span {
+        position: relative;
+        z-index: 999;
+        font-size: 1.5rem;
+      }
+  
+      &:not(:first-child) {
+        margin-top: 1.5rem;
+      }
+    }
+  
+    .ani {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 75%;
+      height: 100%;
+      background-color: #fff;
+    }
+  }
+  
+  /* **********page4********** */
+  
+  .f-list {
+    column-count: 3;
+    margin: 0 100px;
+    gap: 50px;
+    counter-reset: num;
+  
+              /* 
+                  1. 부모요소 (ul, ol)에 자식요소 카운터를위한 리셋
+                  변수명 설정
+  
+                  num = 변수명
+              */
+  
+    li {
+      background-color: #ccc;
+      position: relative;
+      overflow: hidden;
+  
+      &::before {
+        content: counter(num);
+        counter-increment: num 1;
+  
+        /* 
+        
+            2. 카운터 리셋에서 설정한 변수 num을 가져와서
+                숫자1은 1씩 증가
+            3. 컨텐츠 추가 counter( 변수명 )
+        
+        */
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 9999;
+        width: 30px;
+        text-align: center;
+        line-height: 30px;
+        background-color: #f00;
+        color: #fff;
+        font-size: 16px;
+      }
+  
+      &:not(:last-child) {
+        margin-bottom: 50px;
+      }
+  
+      img {
+        width: 100%;
+        vertical-align: top;
+      }
+    }
+  
+    .hoverbox {
+      position: absolute;
+      left: 0;
+      bottom: -100%;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 13px;
+      letter-spacing: -1px;
+      gap: 20px;
+      transition: all .4s ease-in-out;
+      cursor: pointer;
+    }
+  
+    li:hover .hoverbox {
+      bottom: 0;
+    }
+  }
+  
