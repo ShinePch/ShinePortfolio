@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        * { margin: 0; padding: 0;}
+        li { list-style: none ;}
+        a { text-decoration: none; color: inherit; }
+
+        html, body { height: 100%; }
+        .page { width: 100%; min-height: 100%; padding:2.5rem 0; box-sizing: border-box;}
+        .page h2 { font-size: 50px; padding: 1rem 1.5rem; position: relative;}
+        .page h2::after { content: ''; width: 85%; height: 2px; background-color: #333; position: absolute; right:1.5rem; bottom: 1.5rem; }
+        
+
+        /* **********page1********** */
+        .page1 {
+            background-color: #111;
+            color: #f1f1f1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .page1 h1 {
+            font-size: 100px;
+            font-family: impact;
+            margin-bottom: 2rem;
+            border: 1px solid #ddd;
+            padding: 2rem;
+        }
+        .page1 p {
+            color: #fc0;
+            font-size: 1.5rem;
+        }
+        .page1 p span:nth-child(2) {
+            color: bisque;
+        }
+        
+        
+
+
+
+        /* **********page2********** */
+        .page2 .txt1 {
+            border: 1px solid #ccc;
+            padding: 2rem;
+            font-size: 1.5rem;
+            color: #333;
+            line-height: 3rem;
+            margin: 3rem 2rem;
+        }
+
+        .list {
+            border-left: 5px solid #333;
+            position: relative;
+            left: 50%;
+            margin-left: -2.5px;
+            padding-left: 30px;
+        }
+        .list li {
+            border: 1px solid #ccc;
+            width: 600px;
+            padding: 1rem;
+            box-sizing: border-box;
+            position: relative;
+        }
+        .list li:not(:first-child){
+            margin-top: 30px;
+        }
+
+        .list li:nth-child(odd) {
+            background-color: #ccc;
+        }
+        .list li:nth-child(even) {
+            left: -665px;
+            text-align: right;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .list li h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .list li p {
+            font-size: 1.2rem;
+            line-height: 2rem;
+        }
+
+        .list li::after {
+            content: '';
+            width: 0; height: 0;
+            border: 10px solid transparent;
+            position: absolute; 
+        
+        }
+        .list li:nth-child(odd):after {
+            content: '';
+            top: 30px; left: -20px;
+            border-right-color: #ccc;
+        }
+        .list li:nth-child(even):after {
+            content: '';
+            top: 30px; right: -20px;
+            border-left-color: #333;
+        }
+
+
+
+
+     /* **********page3********** */
+        .page3 {
+            background-color: #222;
+            color: #fff;
+        }
+        
+        .skill {
+            width: 50%;
+            margin: 0 auto;
+            margin-top: 50px;
+     }
+     .skill li{
+        height: 100px;
+        background-color: #fc0;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #111;
+        padding: 0 2rem;
+        box-sizing: border-box;
+    }
+    .skill li span {
+        position: relative;
+        z-index: 999;
+        font-size: 1.5rem;
+    }
+    .skill li:not(:first-child){
+        margin-top: 1.5rem;
+    }
+
+    .skill .ani {
+        position: absolute;
+        left: 0; top: 0;
+        width: 75%; height: 100%;
+        background-color: #fff;        
+    }
+
+
+
+    
+
+ /* **********page4********** */
+        .f-list {
+            column-count: 3;
+            margin: 0 100px;
+            gap:50px;
+            counter-reset: num;
+            /* 
+                1. 부모요소 (ul, ol)에 자식요소 카운터를위한 리셋
+                변수명 설정
+
+                num = 변수명
+            */
+        }
+        .f-list li {
+            background-color: #ccc;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .f-list li::before {
+            content:counter(num);
+            counter-increment: num 1;
+            /* 
+            
+                2. 카운터 리셋에서 설정한 변수 num을 가져와서
+                    숫자1은 1씩 증가
+                3. 컨텐츠 추가 counter( 변수명 )
+            
+            */
+            position: absolute;
+            left: 0; top: 0;
+            z-index: 9999;
+            width: 30px; 
+            text-align: center;
+            line-height: 30px;
+            background-color: #f00;
+            color: #fff;
+            font-size: 16px;
+        }
+        .f-list li:not(:last-child){
+            margin-bottom: 50px;
+        }
+        .f-list li img {
+            width:100%;
+            vertical-align: top;
+        }
+        .f-list .hoverbox {
+            position: absolute;
+            left: 0; bottom: -100%;
+            width: 100%; height: 100%;
+            background-color: rgba(0,0,0,.7);
+            color: #fff;
+            display: flex;align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 13px;
+            letter-spacing: -1px;
+            gap:20px;    
+            transition: all .4s ease-in-out;
+            cursor: pointer;
+        }
+
+        .f-list li:hover .hoverbox {
+            bottom: 0;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="page page1">
+        <h1>Shine Bark</h1>
+        <p>
+            <span>Web Desinger</span>
+            <span>Web Publisher</span>
+            <span>Front-End Developer</span>
+        </p>
+    </div>
+
+
+    <div class="page page2">
+        <h2>about</h2>
+        <p class="txt1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae voluptate, exercitationem natus dolore, dolorem ipsam porro enim facere, pariatur quo eius totam quasi corrupti tempore nemo obcaecati rerum iste? Nobis.
+        Aut vitae assumenda omnis dignissimos dolores, amet repellendus sed nisi beatae ad fug enim laudantiu enim laudantium quia? Ut perspiciatis eum culpa! Similique nobis placeat tempora ipsa eum rerum optio.</p>
+        <ul class="list">
+            <li>
+                <h3>2023</h3>
+                <p>그린아카데미수료</p>
+                <p>그린아카데미수료</p>
+                <p>그린아카데미수료</p>
+            </li>
+
+
+            <li>
+                <h3>2023</h3>
+                <p>그린아카데미수료</p>
+                <p>그린아카데미수료</p>
+                <p>그린아카데미수료</p>
+            </li>
+            
+
+
+            <li>
+                <h3>2023</h3>
+                <p>그린아카데미수료</p>
+                <p>그린아카데미수료</p>
+                <p>그린아카데미수료</p>
+            </li>
+
+
+            <li>
+                <h3>2023</h3>
+                <p>그린아카데미수료</p>
+                <p>그린아카데미수료</p>
+                <p>그린아카데미수료</p>
+            </li>
+            
+
+        </ul>
+    </div>
+
+
+    <div class="page page3">
+        <h2>skill</h2>
+        <ul class="skill">
+            <li>
+                <span>HTML</span>
+                <span>90%</span>
+                <div class="ani"></div>
+            </li>
+
+
+
+            <li>
+                <span>HTML</span>
+                <span>90%</span>
+                <div class="ani"></div>
+            </li>
+                
+
+            
+            <li>
+                <span>HTML</span>
+                <span>90%</span>
+                <div class="ani"></div>
+            </li>
+                
+            
+            
+            <li>
+                <span>HTML</span>
+                <span>90%</span>
+                <div class="ani"></div>
+            </li>
+                
+                
+            
+            
+            <li>
+                <span>HTML</span>
+                <span>90%</span>
+                <div class="ani"></div>
+            </li>
+                
+        </ul>
+        
+        
+        
+    </div>
+    
+    
+    <div class="page page4">
+        <h2>Portfolio</h2>
+        <ul class="f-list">
+            <li>
+                <div class="imgbox">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fENhcmVlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="">
+                </div>
+                <div class="hoverbox">
+                    <span>싸이트명 : MG새마을금고</span>
+                    <span>작업명 : 웹퍼블리싱</span>
+                    <span>사용언어 : HTML, CSS, Scss, Javascript</span>
+                    <span>작업시간 : 3.5시간</span>
+                </div>
+            </li>
+
+
+
+
+
+            <li>
+                <div class="imgbox">
+                    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Q2FyZWVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
+                </div>
+                <div class="hoverbox">
+                    <span>싸이트명 : MG새마을금고</span>
+                    <span>작업명 : 웹퍼블리싱</span>
+                    <span>사용언어 : HTML, CSS, Scss, Javascript</span>
+                    <span>작업시간 : 3.5시간</span>
+            </li>
+
+
+
+
+            <li>
+                <div class="imgbox">
+                    <img src="https://images.unsplash.com/photo-1523287562758-66c7fc58967f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Q2FyZWVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
+                </div>
+                <div class="hoverbox">
+                    <span>싸이트명 : MG새마을금고</span>
+                    <span>작업명 : 웹퍼블리싱</span>
+                    <span>사용언어 : HTML, CSS, Scss, Javascript</span>
+                    <span>작업시간 : 3.5시간</span>
+            </li>
+
+
+
+
+            <li>
+                <div class="imgbox">
+                    <img src="https://cdn.pixabay.com/photo/2015/03/29/08/45/entrepreneur-696959__340.jpg" alt="">
+                </div>
+                <div class="hoverbox">
+                    <span>싸이트명 : MG새마을금고</span>
+                    <span>작업명 : 웹퍼블리싱</span>
+                    <span>사용언어 : HTML, CSS, Scss, Javascript</span>
+                    <span>작업시간 : 3.5시간</span>
+            </li>
+
+
+
+
+
+            <li>
+                <div class="imgbox">
+                    <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fENhcmVlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="">
+                </div>
+                <div class="hoverbox">
+                    <span>싸이트명 : MG새마을금고</span>
+                    <span>작업명 : 웹퍼블리싱</span>
+                    <span>사용언어 : HTML, CSS, Scss, Javascript</span>
+                    <span>작업시간 : 3.5시간</span>
+            </li>
+
+
+
+
+
+            <li>
+                <div class="imgbox">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fENhcmVlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="">
+                </div>
+                <div class="hoverbox">
+                    <span>싸이트명 : MG새마을금고</span>
+                    <span>작업명 : 웹퍼블리싱</span>
+                    <span>사용언어 : HTML, CSS, Scss, Javascript</span>
+                    <span>작업시간 : 3.5시간</span>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

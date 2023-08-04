@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { margin: 0; padding: 0;}
+
+        .page {
+            width: 100%; height: 100vh;
+        }
+
+        #page1 {
+            background-color: #ccc;
+            background-image: url(img/bg01.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 10vw;
+            color: #fff;
+            position: fixed;
+            left: 0; top: 0;
+            z-index: 2;
+            text-shadow: 10px 10px 10px rgba(0,0,0,.5);
+        }
+        #page2 {
+            background-color: rgba(0,0,0,.4);
+            position: relative;
+            z-index: 3;
+            margin-top: 100vh;
+        }
+        #page3 {
+            background-color: #999;
+            background-image: url(img/bg02.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            z-index: 3;
+        }
+
+    </style>    
+</head>
+<body>
+    <div class="page" id="page1">page1</div>
+    <div class="page" id="page2">page2</div>
+    <div class="page" id="page3">page3</div>
+</body>
+</html>

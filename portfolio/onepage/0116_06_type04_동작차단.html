@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { margin: 0; padding: 0; } html, body { height: 100%; }
+        .cont {
+            width: 100%; height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 200px;
+        }
+
+        .gnb {
+            position: fixed;
+            right: 50px; top: 50%;
+            transform: translateY(-50%);
+            list-style: none;
+            z-index: 9999;
+        }
+
+        .gnb li:not(:first-child) {
+            margin-top: 20px;
+        }
+
+        .gnb li a {
+            display: block;
+            width: 100px; 
+            border-radius: 100%;
+            background-color: #333;
+            color: #efefef;
+            text-align: center;
+            line-height: 100px;
+            font-size: 12px;
+            text-decoration: none;
+        }
+            
+
+        #home {
+            background-color: #f00;
+        }
+        #about {
+            background-color: orange;
+        }
+        #resume {
+            background-color: #fc0;
+        }
+        #skill {
+            background-color: green;
+        }
+        #portfolio {
+            background-color: #00f;
+        }
+    </style>
+</head>
+<body>
+    <ul class="gnb">
+        <li><a href="#home">home</a></li>
+        <li><a href="#about">about</a></li>
+        <li><a href="#resume">resume</a></li>
+        <li><a href="#skill">skill</a></li>
+        <li><a href="#portfolio">portfolio</a></li>
+    </ul>
+    <div class="cont" id="home">HOME</div>
+    <div class="cont" id="about">ABOUT</div>
+    <div class="cont" id="resume">RESUME</div>
+    <div class="cont" id="skill">SKILL</div>
+    <div class="cont" id="portfolio">PORTFOLIO</div>
+    
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+
+    $('.gnb li a').click(function(e){
+        alert('test');
+        e.preventDefault(); //href동작 실행안함
+        //return false; // href동작 실행안함
+    });
+
+//1. 스크립트 실행 후 
+//2. HTML 의 a가 동작
+// return false (이벤트함수 마지막줄에 작성하기)
+// 이벤트매개변수에 preventDefault(); 설정하기
+</script>
+</body>
+</html>
