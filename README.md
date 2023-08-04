@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="./index.css">
 <style>
 body {
-            background-color: black;
+            background-color: gray;
         }
 ul, li {
     list-style: none;
